@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>爱情的见证❤love董亚倩</title>
+    <link rel="stylesheet" type="text/css" href="css/global.css" />
+    <link rel="stylesheet" type="text/css" href="css/jiemian.css" />
+    <link rel="stylesheet" type="text/css" href="css/yanhua.css" />
+
+
+    <style type="text/css">
+    
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+  
+    <script src="js/yanhua.js"></script>
+    <div id="zhong" style="display:block;">
+        <ul>
+            <li class="lis1 " onclick="dian1()"><img id="li2" src="images/nav1.png" height="230" width="200" alt=""  /><span><a href="#">爱的宣誓</a></span></li>
+            <li class="lis2" onclick="dian2()"><img id="li3" src="images/nav2.png" height="230" width="200" alt=""  /><span><a href="#">时光沙漏</a></span></li>
+            <li class="lis3" onclick="dian3()"><img id="li4" src="images/nav3.png" height="230" width="200" alt="" /><span><a href="#">爱的映像</a></span></li>
+            <li class="lis4" onclick="dian4()"><img id="li5" src="images/nav4.png" height="230" width="200" alt=""  /><span><a href="#">祝福我们</a></span></li>
+            <li class="lis5" onclick="dian5()"><img id="li6" src="images/nav5.png" height="230" width="200" alt=""  /><span><a href="#">悠悠我心</a></span></li>
+            <li class="lis6" onclick="dian6()"><img id="li7" src="images/nav6.png" height="230" width="200" alt="" /><span><a href="#">絮叨絮叨</a></span></li>
+            <li class="lis"><img id="li1" src="images/QQ20170802115926.png" height="500" width="480" alt="" /></li>
+        </ul>
+    </div>
+
+    <div id="num1" style="display:none;">
+        <p class="p1"><img src="images/QQ20170802115926.png" height="400" width="330" alt="" /></p>
+        <h1>爱的宣誓</h1>
+        <p>人物：吴萌love董亚倩</p>
+        <p>不在乎曾经拥有，只在乎天长地久。</p>
+        <p>再美好的回忆也只是回忆。</p>
+        <p>没有那么多的惊喜，只能做到一直陪伴。</p>
+        <p class="p2" onclick="ret();"><img src="images/nav1.png" height="230" width="200" alt="" /><span><a href="#">返回</a></span></p>
+    </div>
+
+
+    <div id="num2" style="display:none;">
+    <h1>时光沙漏</h1>
+        <p class="p1"><img src="images/QQ20170802115926.png" height="400" width="330" alt="" /></p>
+        <span class="chars">亲爱的，你知道我爱你爱了多久了么？</span>
+        <p id="thenceThen"></p>
+        <p><img src="images/20140524013911491.jpg" alt="" width="500px" height="200px" /></p>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--Let's get married</span>
+        <p class="p2" onclick="ret();"><img src="images/nav2.png" height="230" width="200" alt="" /><span><a href="#">返回</a></span></p>
+    </div>
+
+
+    <div id="num3" style="display:none;background-color:pink;">
+        <p class="p1"><img src="images/QQ20170802115926.png" height="400" width="330" alt="" /></p>
+        <h1>视频赏析</h1>
+        <embed src="images/XiaoYing_Video_1503229025924_HD.mp4" type="" width="500px" height="400px" style="margin-top:20px"/>
+        <p class="p2" onclick="ret();"><img src="images/nav3.png" height="230" width="200" alt="" /><span><a href="#">返回</a></span></p>
+    </div>
+
+
+    <div id="num4" style="display:none;">
+        <p class="p1"><img src="images/QQ20170802115926.png" height="400" width="330" alt="" /></p>
+        <h1>祝福我们</h1>
+        <div id="comm">
+            <p class="char1">对我们的祝福：</p>
+            <input type="text" id="case" /><br />
+            <input type="button" value="祝福" id="fir_f" />
+            <p id="zhu">一个小形式，实在做不出来。</p>
+        </div>
+        <p class="p2" onclick="rett();"><img src="images/nav6.png" height="230" width="200" alt="" /><span><a href="#">返回</a></span></p>
+    </div>
+
+
+    <div id="num5" style="display:none;">
+        <div class="postBody"></div>
+            <div id="cnblogs_post_body"><h1>效果展示:</h1>
+            <p class="p1"><img src="images/QQ20170802115926.png" height="400" width="330" alt="" /></p>
+    <div id="container">
+        <img src="images/1.jpg" alt="1.jpg" style="position: absolute; left: 591.3483216921891px; top: 157.3031564806973px; width: 192.97736736052298px; height: 128.65157824034867px; z-index: 15; "> 
+        <img src="images/2.jpg" alt="2.jpg" style="position: absolute; left: 649.9466571120021px; top: 98.18826882005064px; width: 148.64120161503797px; height: 99.09413441002532px; z-index: 9; "> 
+        <img src="images/3.jpg" alt="3.jpg" style="position: absolute; left: 584.4264140456866px; top: 39.76540089166667px; width: 104.82405066875px; height: 69.88270044583334px; z-index: 3; ">
+        <img src="images/4.jpg" alt="4.jpg" style="position: absolute; left: 419.8140983934254px; top: 4.3501025239425894px; width: 78.26257689295694px; height: 52.1750512619713px; z-index: 0; ">
+        <img src="images/5.jpg" alt="5.jpg" style="position: absolute; left: 218.98601976754927px; top: 5.469813971628923px; width: 79.10236047872169px; height: 52.73490698581446px; z-index: 0; ">
+        <img src="images/6.jpg" alt="6.jpg" style="position: absolute; left: 58.65167830781031px; top: 42.69684351930296px; width: 107.02263263947722px; height: 71.34842175965147px; z-index: 4; ">
+        <img src="images/7.jpg" alt="7.jpg" style="position: absolute; left: 0.05334288799792031px; top: 101.81173117994828px; width: 151.35879838496123px; height: 100.90586558997414px; z-index: 10; ">
+        <img src="images/8.jpg" alt="8.jpg" style="position: absolute; left: 65.57358595431126px; top: 160.23459910833247px; width: 195.17594933124934px; height: 130.11729955416624px; z-index: 16; ">
+        <img src="images/9.jpg" alt="9.jpg" style="position: absolute; left: 230.1859016065757px; top: 195.64989747605753px; width: 221.73742310704313px; height: 147.82494873802875px; z-index: 19; ">
+        <img src="images/10.jpg" style="position: absolute; left: 431.01398023245173px; top: 194.53018602837096px; width: 220.89763952127822px; height: 147.26509301418548px; z-index: 19; "> </div>
+    </div>
+    <p class="p2" onclick="ret();"><img src="images/nav5.png" height="230" width="200" alt="" /><span><a href="#">返回</a></span></p>
+</div>
+
+
+    <div id="num6" style="display:none;">
+        <p class="p1"><img src="images/QQ20170802115926.png" height="400" width="330" alt="" /></p>
+        <h1>闲言碎语</h1>
+        <p class="char">夜里要记得盖好被子。不一定要穿的很美, 但一定要暖和。洗澡的前要记得先把水的温度调好。如果感冒了一定要去医院、吃药。不开心的时候要给我打电话或发短信，我会出现在你身边。蹲下之后不要猛地站起来，会头晕。有爱吃的东西要适量的吃，别一次吃太多。过马路不要玩手机，左右看看车。</p>
+        <p class="xin"><img src="images/xinxin.gif" height="200" width="269" alt="" /></p>
+        
+        <p class="p2" onclick="ret();"><img src="images/nav4.png" height="230" width="200" alt="" /><span><a href="#">返回</a></span></p>
+    </div>
+
+
+    <div id="spr"></div>
+    <div id="div1">
+        <p id="p1"><audio src="images/白小白 - 最美情侣.mp3" name="yin" controls="controls" preload="auto" autoplay loop="loop"></audio></p>
+    </div>
+</body>
+<script type="text/javascript" src="js/fanhui.js"></script>
+<script type="text/javascript" src="js/gundong.js"></script>
+<script> 
+    function stop(){ 
+    alert('董亚倩宝贝，我爱你！');
+    return false; 
+    } 
+    document.oncontextmenu=stop; 
+</script>
+
+<script type="text/javascript">
+    function rett(){
+        var fir = document.getElementById('spr');
+        ave1.style.display="none";
+        ave2.style.display="none";
+        ave3.style.display="none";
+        ave4.style.display="none";
+        ave5.style.display="none";
+        ave6.style.display="none";
+        ave7.style.display="none";
+        fir.innerHTML = "/*<a href='惊喜.html'>惊喜！</a>*/"
+    } 
+</script>
+</html>

@@ -1,0 +1,27 @@
+<html>  
+<head>  
+<script   type="text/javascript">  
+function callParent() {  
+try{  
+  var keycode_now;  
+  if (parent.Sys.ie){  
+      if (event.keyCode==37) {keycode_now = 37;}  
+      else if (event.keyCode==39) {keycode_now = 39;}  
+  }  
+  else if (parent.Sys.firefox){  
+      var keycode = e.which;  
+      if (keycode==37) {keycode_now = 37;}  
+      else if (keycode==39) {keycode_now = 39;}  
+  }  
+   parent.jumpPage_child(keycode_now);  
+}catch(e){alert(e.message);}  
+}  
+  
+document.onkeydown=callParent;  
+  
+</script>  
+  
+<body style="background-color:#ddd;font-size:30px;text-align:center;">  
+this is  1.html  
+</body>  
+</html>  

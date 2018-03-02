@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+ #thenceThen{font-size:2em;}
+</style>
+<script type="text/javascript" language="javascript">
+function thenceThen(timespan){
+ var date1=new Date(timespan);
+ var totalSecs=(new Date()-date1)/1000;
+ var days=Math.floor(totalSecs/3600/24);
+ var hours=Math.floor((totalSecs-days*24*3600)/3600);
+ var mins=Math.floor((totalSecs-days*24*3600-hours*3600)/60);
+ var secs=Math.floor((totalSecs-days*24*3600-hours*3600-mins*60));
+ document.getElementById("thenceThen").innerText="距我们相爱："+days+"天"+hours+"小时"+mins+"分钟"+secs+"秒";
+}
+var clock;
+window.onload=function(){
+ clock=self.setInterval("thenceThen('2017/05/20')", 500);
+}
+</script>
+</head>
+<body>
+<div id="thenceThen"></div>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head lang="ch">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宝宝，爱你</title>
+<link rel="stylesheet" type="text/css" href="css/global.css" />
+<link rel="stylesheet" type="text/css" href="css/surprise.css" />
+    <style>
+    body{
+        cursor: url(image/48648_1.gif),auto;
+    }
+        a{
+            animation:ss 5s 1000;
+        }
+        @-webkit-keyframes ss{
+            0%{color: #99FFFF;}
+            50%{color: red;}
+            100%{color: #99FFFF;}
+        }
+        #section1 #xian{
+            width: 2px;
+            height: 98%;
+            background-color: #ccc;
+/*             margin: 0 auto; */
+            position: absolute;
+            left: 960px;
+        }
+        #xin li{
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            border-radius: 25px;
+            margin: 120px auto;
+            font-size: 40px;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+    /* 透明度 */
+        @-webkit-keyframes fadeIn {/*透明效果设置 fadeIn是这个动画的名字 用于后面引用*/
+        0% {
+            opacity: 0.1; /*初始状态 透明度为0*/
+        }
+        25%{
+            opacity: 0.2;
+        }
+        50% {
+            opacity:0.3;
+        }
+        75%{
+            opacity:0.4;
+        }
+        100% {
+            opacity: 0.5; /*结尾状态 透明度为1*/
+        }
+    }
+
+    /* 框1 */
+        #kuang1{
+            width: 500px;
+            height: 200px;
+            position: absolute;
+            top: 123%;
+            left: 300px;
+            display:none;
+            -webkit-animation-name: fadeIn; /*动画名称*/
+            -webkit-animation-duration: 1s; /*动画持续时间*/
+            -webkit-animation-iteration-count: 1; /*动画次数*/
+            -webkit-animation-delay: 0s; /*延迟时间*/
+        }
+        #kuang1 .lit1{
+            width: 480px;
+            height: 200px;
+            background-color: #FF0066;
+            border-radius: 20px;
+        }
+        #kuang1 .lit2{
+            width:0;padding:0;  
+            border:10px solid transparent;  
+            border-left-color:#FF0066; 
+            position: absolute;
+            left: 480px;
+            top: 30px;
+        }
+
+
+    /* 框2 */
+        #kuang2{
+            width: 500px;
+            height: 200px;
+            position: absolute;
+            top: 140%;
+            right: 300px;
+            display:none;
+            -webkit-animation-name: fadeIn; /*动画名称*/
+            -webkit-animation-duration: 1s; /*动画持续时间*/
+            -webkit-animation-iteration-count: 1; /*动画次数*/
+            -webkit-animation-delay: 0s; /*延迟时间*/
+        }
+        #kuang2 .lit1{
+            width: 480px;
+            height: 200px;
+            background-color: skyblue;
+            border-radius: 20px;
+        }
+        #kuang2 .lit2{
+            width:0;padding:0;  
+            border:10px solid transparent;  
+            border-right-color:skyblue; 
+            position: absolute;
+            left: -20px;
+            top: 30px;
+        }
+
+    /* 框3 */
+        #kuang3{
+            width: 500px;
+            height: 200px;
+            position: absolute;
+            top: 160%;
+            left: 300px;
+            display:none;
+            -webkit-animation-name: fadeIn; /*动画名称*/
+            -webkit-animation-duration: 1s; /*动画持续时间*/
+            -webkit-animation-iteration-count: 1; /*动画次数*/
+            -webkit-animation-delay: 0s; /*延迟时间*/
+        }
+        #kuang3 .lit1{
+            width: 480px;
+            height: 200px;
+            background-color: #FF3300;
+            border-radius: 20px;
+        }
+        #kuang3 .lit2{
+            width:0;padding:0;  
+            border:10px solid transparent;  
+            border-left-color:#FF3300; 
+            position: absolute;
+            left: 480px;
+            top: 30px;
+        }
+
+        
+
+        #bankImages {
+            display: none;
+         }
+         #screen {
+            position: absolute;
+            top: 215%;
+            left: 200px;
+            width: 70%;
+            height: 60%;
+        }
+         #screen img {
+            position: absolute;
+            cursor: pointer;
+            visibility: hidden;
+            width: 0px;
+            height: 0px;
+         }
+         #screen .tvover {
+            border: solid #876;
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+         #screen .tvout {
+            border: solid #fff;
+            opacity: 0.7;
+        }
+        #char1{
+            padding-left: 700px;
+        }
+        #jian{
+            margin-left: 700px;
+        }
+        #xian_1{
+            width: 80%;
+            height: 2px;
+            background-color: #00f;
+            margin: 20px auto;
+        }
+        video{
+            width:100%;
+            z-index: -9999;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            position: absolute;
+            top:-250px;
+            left: 0;
+
+        }
+    </style>
+</head>
+<body onselectstart="return false" onpaste="return false" oncopy="return false;" 
+oncut="return false;">
+
+        <video autoplay muted loop> 
+        <!-- autoplay 视频开始  autoplay有无声音 loop循环 -->
+            <source src="images/56_0020.mov">
+        </video>
+<div id="container">
+<!-- 第一界面 -->
+    <div class="section" id="section0">
+    <div id="bars">
+        <ul>
+            <li class="lis1"><a href="#section0">爱情时刻</a></li>
+            <li><a href="#section1">告白墙</a></li>
+            <li><a href="#section2">照片墙</a></li>
+            <li><a href="#section3">祝愿美好的明天</a></li>
+        </ul>
+    </div>
+        <h1>爱情时刻</h1>
+        <div id="hui1"></div>
+        <div id="fen"></div>
+        <div id="hui2"></div>
+        <p>我们的爱情再打打闹闹中度过，却不离不弃</p>
+        <div id="pot">
+            <img src="images/30ad.jpg" height="400" width="400" alt="" />
+
+            <img src="images/8718367ad.jpg" height="400" width="400" alt="" />
+        </div>
+    </div>
+<!-- 第二界面 -->
+    <div class="section" id="section1">
+        <div id="bars">
+            <ul>
+                <li class="lis1"><a href="#section0">爱情时刻</a></li>
+                <li><a href="#section1">告白墙</a></li>
+                <li><a href="#section2">照片墙</a></li>
+                <li><a href="#section3">祝愿美好的明天</a></li>
+            </ul>
+        </div>
+        <div id="xian"></div>
+        <div id="xin">
+            <ul>
+                <li name="love" onmouseover="f1()" onmouseout="g1()"></li>
+                <li name="love" onmouseover="f2()" onmouseout="g2()"></li>
+                <li name="love" onmouseover="f3()" onmouseout="g3()"></li>
+            </ul>
+        </div>
+        <div id="kuang1">
+            <ul>
+                <li class="lit1" style="color:purple;font-size:20px;text-align:center;line-height:80px;">一个人走会走的很快，<br />两个人走才会走得很远。</li>
+                <li class="lit2"></li>
+            </ul>
+        </div>
+        <div id="kuang2">
+            <ul>
+                <li class="lit1" style="color:yellow;font-size:20px;text-align:center;line-height:80px;">我想牵着你的手慢慢变老。<br />我爱你</li>
+                <li class="lit2"></li>
+            </ul>
+        </div>
+        <div id="kuang3">
+            <ul>
+                <li class="lit1" style="color:pink;font-size:20px;text-align:center;line-height:80px;">我会好好努力，<br />总有一天等我功臣名就娶你回家！</li>
+                <li class="lit2"></li>
+            </ul>
+        </div>
+    </div>
+<!-- 第三界面 -->
+    <div class="section" id="section2">
+        <div id="bars">
+        <ul>
+            <li class="lis1"><a href="#section0">爱情时刻</a></li>
+            <li><a href="#section1">告白墙</a></li>
+            <li><a href="#section2">照片墙</a></li>
+            <li><a href="#section3">祝愿美好的明天</a></li>
+        </ul>
+    </div>
+    <div id="screen">
+        <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+            
+        </div>
+    </div>
+    <div id="bankImages">
+        <img alt="" src="img/-1f9de583110eade8.jpg">
+        <img alt="" src="img/-3dd5c5e9e781e903.jpg">
+        <img alt="" src="img/-5977992cd5e37ddc.jpg">
+        <img alt="" src="img/-67826ec361013b82.jpg">
+        <img alt="" src="img/-6f3cb43f04c47511.jpg">
+        <img alt="" src="img/-7e274ac762da5914.jpg">
+        <img alt="" src="img/-88ef11e6ddbc9b2.jpg">
+        <img alt="" src="img/2650dca7f325dfef.jpg">
+        <img alt="" src="img/279a3e4c2cc6f3aa.jpg">
+        <img alt="" src="img/2de0cd9978a0d462.jpg">
+        <img alt="" src="img/38c8c3b73b191feb.jpg">
+        <img alt="" src="img/410bfed0b9ad6132.jpg">
+        <img alt="" src="img/4496493a96c4b99.jpg">
+        <img alt="" src="img/4691fb96f5c30e60.jpg">
+        <img alt="" src="img/603d60613d57eac3.jpg">
+        <img alt="" src="img/6ea3a4bc56cf152b.jpg">
+    </div>
+    </div>
+
+
+<!-- 第四界面 -->
+    <div class="section" id="section3">
+        <div id="bars">
+        <ul>
+            <li class="lis1"><a href="#section0">爱情时刻</a></li>
+            <li><a href="#section1">告白墙</a></li>
+            <li><a href="#section2">照片墙</a></li>
+            <li><a href="#section3">祝愿美好的明天</a></li>
+        </ul>
+    </div>
+    <p id="char1">你想说的话：</p>
+    <textarea id="jian" cols="70" rows="10"></textarea>
+    <button id="fa" onclick="addrow()">发表</button>
+    <div id="xian_1"></div>
+    <div id="order1">
+        
+    </div>
+    </div>
+</div>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="js/sanye.js"></script>
+<script type="text/javascript" src="js/3d-tv.js"></script>
+<script type="text/javascript">
+    var kuang1 = document.getElementById('kuang1');
+    var kuang2 = document.getElementById('kuang2');
+    var kuang3 = document.getElementById('kuang3');
+    var kuang4 = document.getElementById('kuang4');
+    var kuang5 = document.getElementById('kuang5');
+    function f1(){
+        var love = document.getElementsByName('love')[0];
+            love.innerHTML="❤"
+        kuang1.style.display='block';
+        kuang1.style.opacity="0.5";
+    }
+    function g1(){
+        var love = document.getElementsByName('love')[0];
+            love.innerHTML=""
+        kuang1.style.display='none';
+    }
+    function f2(){
+        var love = document.getElementsByName('love')[1];
+            love.innerHTML="❤"
+        kuang2.style.display='block';
+        kuang2.style.opacity="0.5";
+    }
+    function g2(){
+        var love = document.getElementsByName('love')[1];
+            love.innerHTML=""
+        kuang2.style.display='none';
+    }
+    function f3(){
+        var love = document.getElementsByName('love')[2];
+            love.innerHTML="❤"
+        kuang3.style.display='block';
+        kuang3.style.opacity="0.5";
+    }
+    function g3(){
+        var love = document.getElementsByName('love')[2];
+            love.innerHTML=""
+        kuang3.style.display='none';
+    }
+</script>
+<script type="text/javascript">
+    /* ==== start script ==== */
+    onresize = tv.resize;
+    tv.init();
+</script>
+<!-- <script type="text/javascript"> 
+    function stop(){ 
+    alert('董亚倩宝贝，我爱你！');
+    return false; 
+    } 
+    document.oncontextmenu=stop; 
+</script> -->
+</body>
+</html>

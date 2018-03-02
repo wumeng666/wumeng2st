@@ -1,0 +1,92 @@
+@-webkit-keyframes glow {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.125);
+            transform: scale(1.125);
+  }
+}
+@keyframes glow {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.125);
+            transform: scale(1.125);
+  }
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #110c1e;
+  text-align: center;
+  -webkit-filter: contrast(3);
+          filter: contrast(3);
+}
+
+.orb {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  background: #fff;
+  box-shadow: 0 0 80px #ebd4ff,0 0 20px #f6ffe1,0 0 10px #f6ffe1;
+  border-radius: 50%;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+}
+.orb::after, .orb::before {
+  position: absolute;
+  -webkit-animation-name: glow;
+          animation-name: glow;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  top: 50%;
+  left: 50%;
+  content: '';
+  background: -webkit-radial-gradient(center ellipse, rgba(240, 255, 255, 0.05) 0%, rgba(240, 255, 255, 0) 50%);
+  background: radial-gradient(ellipse at center, rgba(240, 255, 255, 0.05) 0%, rgba(240, 255, 255, 0) 50%);
+}
+.orb::after {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  width: 40rem;
+  height: .5rem;
+  margin-left: -20rem;
+  margin-top: -.25rem;
+}
+.orb::before {
+  -webkit-animation-duration: .25s;
+          animation-duration: .25s;
+  width: 20rem;
+  height: 2rem;
+  margin-left: -10rem;
+  margin-top: -1rem;
+}
+
+.flake {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: #fff;
+  width: .25rem;
+  height: .25rem;
+  margin-top: -.125rem;
+  margin-left: -.125rem;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #f6ffe1,0 0 10px #f6ffe1;
+}

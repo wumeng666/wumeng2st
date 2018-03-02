@@ -1,0 +1,39 @@
+    h1{
+        margin-top:150px;
+        text-align: center;
+        color: #0ff;
+        font-family: 楷书;
+    }
+    body{
+        background: url(../images/20150423194620_A5kvK.gif);
+    }
+    input{
+        float:right;
+        border-radius: 20px;
+        outline:none;
+        color:#9900CC;
+        font-family: 隶书;
+        font-size: 20px;
+    }
+    td{
+        padding-top: 50px;
+        font-size: 20px;
+        color: #f0f;
+        font-family: 隶书;
+    }
+    table{
+        margin: 30px auto;
+    }
+    div{
+        color: #f00;
+        font-size: 20px;
+    }
+    #ju{
+        float: left;
+        padding-left: 150px;
+    }
+    #ti{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }

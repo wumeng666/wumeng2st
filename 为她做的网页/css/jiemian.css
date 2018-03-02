@@ -1,0 +1,505 @@
+    *{
+        padding:0px;
+        margin: 0px;
+    }
+    #zhong{
+        /* width: 1000px;
+        height: 800px; */
+        border: 1px solid;
+        position: absolute;
+        top: 50px;
+        left: 500px;
+        text-shadow: 5px 5px 5px yellow;
+    }
+    
+    #zhong .lis{
+        position: absolute;
+        top: 200px;
+        left: 200px;
+    }
+    .stop{
+        animation: none!important;
+    }
+    @-webkit-keyframes fadeIn {/*透明效果设置 fadeIn是这个动画的名字 用于后面引用*/
+        0% {
+            opacity: 0; /*初始状态 透明度为0*/
+        }
+        25% {
+            opacity: 0; /*中间状态 透明度为0*/
+        }
+        50% {
+            opacity:0;
+        }
+        75%{
+            opacity:0;
+        }
+        100% {
+            opacity: 1; /*结尾状态 透明度为1*/
+        }
+    }
+   #li1{
+        -webkit-animation-name: fadeIn; /*动画名称*/
+        -webkit-animation-duration: 13s; /*动画持续时间*/
+        -webkit-animation-iteration-count: 1; /*动画次数*/
+        -webkit-animation-delay: 0s; /*延迟时间*/
+    }
+    #li2{
+        -webkit-animation-name: fadeIn; /*动画名称*/
+        -webkit-animation-duration:1s; /*动画持续时间*/
+        -webkit-animation-iteration-count: 1; /*动画次数*/
+        -webkit-animation-delay: 0s; /*延迟时间*/
+    }
+    #li3{
+        -webkit-animation-name: fadeIn; /*动画名称*/
+        -webkit-animation-duration: 3s; /*动画持续时间*/
+        -webkit-animation-iteration-count: 1; /*动画次数*/
+        -webkit-animation-delay: 0s; /*延迟时间*/
+    }
+    #li4{
+        -webkit-animation-name: fadeIn; /*动画名称*/
+        -webkit-animation-duration: 5s; /*动画持续时间*/
+        -webkit-animation-iteration-count: 1; /*动画次数*/
+        -webkit-animation-delay: 0s; /*延迟时间*/
+    }
+    #li5{
+        -webkit-animation-name: fadeIn; /*动画名称*/
+        -webkit-animation-duration: 7s; /*动画持续时间*/
+        -webkit-animation-iteration-count: 1; /*动画次数*/
+        -webkit-animation-delay: 0s; /*延迟时间*/
+    }
+    #li6{
+        -webkit-animation-name: fadeIn; /*动画名称*/
+        -webkit-animation-duration: 9s; /*动画持续时间*/
+        -webkit-animation-iteration-count: 1; /*动画次数*/
+        -webkit-animation-delay: 0s; /*延迟时间*/
+    }
+    #li7{
+        -webkit-animation-name: fadeIn; /*动画名称*/
+        -webkit-animation-duration: 11s; /*动画持续时间*/
+        -webkit-animation-iteration-count: 1; /*动画次数*/
+        -webkit-animation-delay: 0s; /*延迟时间*/
+    }
+    #zhong .lis1{
+        position: absolute;
+        top: 100px;
+        left: 70px;
+        /* z-index: -50; */
+    }
+    #zhong .lis1 span{
+        position: absolute;
+        left: 20px;
+        top: 80px;
+        transform: rotateZ(50deg);
+        font-size: 30px;
+        color: #fff;
+        font-family: 隶书;
+    }
+    #zhong .lis2{
+        position: absolute;
+        top: 320px;
+        left: 30px;
+        transform: rotateZ(-20deg);
+        /* z-index: -50; */
+    }
+    #zhong .lis2 span{
+        position: absolute;
+        left: 20px;
+        top: 90px;
+        transform: rotateZ(10deg);
+        font-size: 30px;
+        color: #fff;
+        font-family: 隶书;
+    }
+    #zhong .lis3{
+        position: absolute;
+        top: 500px;
+        left: 100px;
+        transform: rotateZ(10deg);
+        /* z-index: -50; */
+    }
+    #zhong .lis3 span{
+        position: absolute;
+        left: 20px;
+        top: 100px;
+        transform: rotateZ(-45deg);
+        font-size: 30px;
+        color: #fff;
+        font-family: 隶书;
+    }
+    #zhong .lis6{
+        position: absolute;
+        top: 100px;
+        left:630px;
+        transform: rotateZ(20deg);
+        /* z-index: -50; */
+    }
+    #zhong .lis6 span{
+        position: absolute;
+        left: 20px;
+        top: 100px;
+        transform: rotateZ(-55deg);
+        font-size: 30px;
+        color: #fff;
+        font-family: 隶书;
+    }
+    #zhong .lis5{
+        position: absolute;
+        top: 300px;
+        left: 650px;
+        transform: rotateZ(30deg);
+        /* z-index: -50; */
+    }
+    #zhong .lis5 span{
+        position: absolute;
+        left: 40px;
+        top: 90px;
+        transform: rotateZ(-10deg);
+        font-size: 30px;
+        color: #fff;
+        font-family: 隶书;
+    }
+    #zhong .lis4{
+        position: absolute;
+        top: 500px;
+        left: 600px;
+        transform: rotateZ(-10deg);
+        /* z-index: -50; */
+    }
+    #zhong .lis4 span{
+        position: absolute;
+        left: 40px;
+        top: 80px;
+        transform: rotateZ(45deg);
+        font-size: 30px;
+        color: #fff;
+        font-family: 隶书;
+    }
+
+
+    #num1{
+        position: absolute;
+        top: 200px;
+        left: 600px;
+        width: 700px;
+        height: 500px;
+        background-color: #fff;
+        border-radius: 100px;
+        text-shadow: 5px 5px 5px skyblue;
+    }
+    #num1 .p1{
+        position: absolute;
+        top: -200px;
+        left:-150px;
+        transform: rotateZ(-10deg);
+    }
+    #num1 .p2{
+        position: absolute;
+        top: 400px;
+        left: 600px;
+        transform: rotateZ(160deg);
+    }
+    #num1 .p2 span{
+        position: absolute;
+        top: 100px;
+        left: 60px;
+        color: #fff;
+        font-size: 40px;
+        transform: rotateZ(-140deg);
+    }
+    #num1{
+        text-align: center;
+    }
+    #num1 h1{
+        padding-top: 50px;
+    }
+    #num1 p{
+        line-height: 80px;
+    }
+
+
+
+    #num2{
+        position: absolute;
+        top: 200px;
+        left: 600px;
+        width: 700px;
+        height: 500px;
+        background-color: #fff;
+        text-align: center;
+        text-shadow: 5px 5px 5px pink;
+    }
+    #num2 .p1{
+        position: absolute;
+        top: -200px;
+        left:-150px;
+        transform: rotateZ(-10deg);
+    }
+    #num2 .p2{
+        position: absolute;
+        top: 400px;
+        left: 600px;
+        transform: rotateZ(160deg);
+    }
+    #num2 .p2 span{
+        position: absolute;
+        top: 80px;
+        left: 60px;
+        color: #fff;
+        font-size: 40px;
+        transform: rotateZ(-140deg);
+    }
+    #num2 #thenceThen{
+        font-size: 25px;
+    }
+    #num2 h1{
+        margin-bottom: 50px;
+    }
+    #num2 p{
+        line-height: 80px;
+        font-family: 幼圆;
+    }
+    #num2 .chars{
+        font-size: 20px;
+        font-family: 隶书;
+        color: pink;
+    }
+
+
+
+        #num3{
+        position: absolute;
+        top: 200px;
+        left: 600px;
+        width: 700px;
+        height: 500px;
+        background-color: #fff;
+        text-align: center;
+        text-shadow: 5px 5px 5px pink;
+    }
+    #num3 .p1{
+        position: absolute;
+        top: -200px;
+        left:-150px;
+        transform: rotateZ(-10deg);
+    }
+    #num3 .p2{
+        position: absolute;
+        top: 400px;
+        left: 600px;
+        transform: rotateZ(-140deg);
+    }
+    #num3 .p2 span{
+        position: absolute;
+        top: 100px;
+        left: 60px;
+        color: #fff;
+        font-size: 40px;
+        transform: rotateZ(130deg);
+    }
+
+
+
+        #num4{
+        position: absolute;
+        top: 200px;
+        left: 600px;
+        width: 700px;
+        height: 500px;
+        background-color: #fff;
+        text-align: center;
+        text-shadow: 5px 5px 5px pink;
+    }
+    #num4 .p1{
+        position: absolute;
+        top: -200px;
+        left:-150px;
+        transform: rotateZ(-10deg);
+    }
+    #num4 .p2{
+        position: absolute;
+        top: 400px;
+        left: 600px;
+        transform: rotateZ(160deg);
+    }
+    #num4 .p2 span{
+        position: absolute;
+        top: 100px;
+        left: 60px;
+        color: #fff;
+        font-size: 40px;
+        transform: rotateZ(-140deg);
+    }
+    #num4 #comm{
+        margin-top: 20px;
+    }
+    #num4 #comm .char1{
+        margin-left: -300px;
+        margin-bottom: 20px;
+    }
+    #num4 #comm #case{
+        width: 400px;
+        height: 100px;
+    }
+    #num4 #comm #fir_f{
+        width: 50px;
+        height: 30px;
+        margin-left: 300px;
+        margin-top: 20px;
+        background-color: pink;
+    }
+     #num4 #comm #zhu{
+        color: #ddd;
+        position: absolute;
+        bottom: 20px;
+        right: 100px;
+        text-shadow: 1px 1px 1px red;
+     }
+
+
+
+
+    #num5{
+        position: absolute;
+        top: 200px;
+        left: 600px;
+        width: 700px;
+        height: 500px;
+        background-color: #fff;
+        text-align: center;
+        border-radius: 300px;
+        text-shadow: 5px 5px 5px purple;
+    }
+    #num5 #container{
+        position: relative;
+        margin: 50px 10px;
+    }
+    #num5 .p1{
+        position: absolute;
+        top: -200px;
+        left:-150px;
+        transform: rotateZ(-10deg);
+    }
+    #num5 .p2{
+        position: absolute;
+        top: 400px;
+        left: 600px;
+        transform: rotateZ(160deg);
+    }
+    #num5 .p2 span{
+        position: absolute;
+        top: 100px;
+        left: 60px;
+        color: #fff;
+        font-size: 40px;
+        transform: rotateZ(-140deg);
+    }
+
+
+    #num6{
+        position: absolute;
+        top: 200px;
+        left: 600px;
+        width: 700px;
+        height: 500px;
+        background-color: #fff;
+        text-align: center;
+        text-shadow: 5px 5px 5px pink;
+        border-radius: 100px;
+    }
+    #num6 .p1{
+        position: absolute;
+        top: -200px;
+        left:-150px;
+        transform: rotateZ(-10deg);
+    }
+    #num6 .p2{
+        position: absolute;
+        top: 400px;
+        left: 600px;
+        transform: rotateZ(160deg);
+    }
+    #num6 .p2 span{
+        position: absolute;
+        top: 100px;
+        left: 60px;
+        color: #fff;
+        font-size: 40px;
+        transform: rotateZ(-140deg);
+    }
+    #num6 .char{
+        width: 250px;
+        margin-top: 50px;
+        margin-left: 250px;
+        color: purple;
+        text-shadow: 3px 3px 3px skyblue;
+        font-size: 20px;
+    }
+
+
+    #spr{
+        position: absolute;
+        top: 200px;
+        left: 800px;
+        font-size: 100px;   
+    }
+    #spr{
+        width: 400px;
+        height: 400px;
+        margin:100px auto;
+        animation: beat 2s ease-in-out infinite;
+    }
+    #spr a{
+        color: red;
+        font-family: 隶书;
+    }
+    @keyframes beat{
+        0%{
+            transform: scale(1.3);
+        }
+        25%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(1.3);
+        }
+        75%{
+            transform: scale(1);
+        }
+        100%{
+            transform: scale(1.3);
+        }
+    }
+    #num6 .xin{
+        float:left;
+        margin-top: -50px;
+    }
+
+    span{
+        animation:ai 5s 1000;
+    }
+    @-webkit-keyframes ai{
+        0%{color: skyblue;}
+        25%{color: pink;}
+        50%{color: purple;}
+        75%{color: pink;}
+        100%{color: skyblue;}
+    }
+    p{
+        animation:ai1 5s 1000;
+    }
+    @-webkit-keyframes ai1{
+        0%{color: red;}
+        50%{color: purple;}
+        100%{color: red;}
+    }
+    h1{
+        animation:ai2 5s 1000;
+    }
+    a{
+        animation:ai1 5s 1000;
+    }
+    @-webkit-keyframes ai2{
+        0%{color: #FF33FF;}
+        50%{color: #CC00FF;}
+        100%{color: #FF33FF;}
+    }

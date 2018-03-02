@@ -1,0 +1,136 @@
+<html>  
+<head>  
+<script   type="text/javascript">  
+//实现全屏  
+function Fkey(){  
+     var WsShell = new ActiveXObject('WScript.Shell')  
+     WsShell.SendKeys('{F11}');  
+}  
+  
+  
+//判断浏览器类型  
+var Sys = {};  
+var ua = navigator.userAgent.toLowerCase();  
+var s;  
+(s = ua.match(/msie ([\d.]+)/)) ? Sys.ie = s[1] :  
+(s = ua.match(/firefox\/([\d.]+)/)) ? Sys.firefox = s[1] :  
+(s = ua.match(/chrome\/([\d.]+)/)) ? Sys.chrome = s[1] :  
+(s = ua.match(/opera.([\d.]+)/)) ? Sys.opera = s[1] :  
+(s = ua.match(/version\/([\d.]+).*safari/)) ? Sys.safari = s[1] : 0;  
+  
+//被嵌入的页面路径列表  
+var page_links=new Array("1.html",  
+                         "2.html",  
+                         "3.html");  
+var page_now=0;//表示当前显示的页面  
+  
+//淡入淡出效果  
+var opacity=0;  
+function addOpacity(){  
+  opacity+=10;  
+  document.body.style.filter="alpha(opacity="+opacity+")";  
+  document.body.style.opacity=opacity/100;  
+  if(opacity<100)setTimeout(function(){addOpacity();},30);  
+}  
+  
+  
+//更改iframe中页面，淡入淡出效果  
+function decOpacity(url){  
+   opacity=0;  
+   addOpacity();  
+   document.getElementById('ifr').src=url;  
+}  
+  
+//键盘上按键按下时调用该函数  
+function jumpPage(e) {  
+  
+  var keycode_now;  
+  if (Sys.ie){  
+      if (event.keyCode==37) {keycode_now = 37;}  
+      else if (event.keyCode==39) {keycode_now = 39;}  
+  }  
+  else if (Sys.firefox){  
+      var keycode = e.which;  
+      if (keycode==37) {keycode_now = 37;}  
+      else if (keycode==39) {keycode_now = 39;}  
+  }  
+  
+  if (keycode_now==37) {  
+          if(page_now>0){  
+              page_nowpage_now = page_now-1;  
+          }else{  
+              page_now = page_links.length-1;  
+          }  
+  }  
+  else if (keycode_now==39) {  
+          if(page_now<page_links.length-1){  
+              page_nowpage_now = page_now+1;  
+          }else{  
+              page_now = 0;  
+          }  
+  }  
+  
+  decOpacity(page_links[page_now]);  
+}  
+  
+//键盘上按键在iframe中按下时调用该函数，  
+function jumpPage_child(keycode_now) {  
+  if (keycode_now==37) {  
+          if(page_now>0){  
+              page_nowpage_now = page_now-1;  
+          }else{  
+              page_now = page_links.length-1;  
+          }  
+  }  
+  else if (keycode_now==39) {  
+          if(page_now<page_links.length-1){  
+              page_nowpage_now = page_now+1;  
+          }else{  
+              page_now = 0;  
+          }  
+  }  
+  decOpacity(page_links[page_now]);  
+}  
+//键盘上按键按下时调用函数jumpPage  
+document.onkeydown=jumpPage;  
+</script>  
+  
+</head>  
+<style type="text/css"> body{filter:alpha(opacity=80);-moz-opacity:0.8;border:0px solid red;}</style>  
+  
+<body onload="javascript:document.all.ifr.height=document.body.clientHeight;"    
+      topmargin="0"   
+      marginwidth="0"   
+      marginheight="0"  
+      scroll="no"  
+      style="overflow-y:hidden;">  
+  
+<div style="background:#EEE;  
+            font-color:#666666;  
+            font-size:12px;  
+            width=100%;  
+            margin:0;  
+            padding:0;  
+            cellspacing:0;  
+            height:26px;  
+            line-height:26px;  
+            text-align:center;  
+            border:0px solid blue;">  
+<a href="#" onclick="javascript:decOpacity(page_links[0]);">1.html</a>  
+<a href="#" onclick="javascript:decOpacity(page_links[1]);">2.html</a>  
+<a href="#" onclick="javascript:decOpacity(page_links[2]);">3.html</a>  
+</div>  
+  
+<iframe id="ifr"   
+        name="ifr"   
+        src="1.html"   
+        style="height:100%;width:100%;border:0px solid blue;margin:0;padding:0;"  
+        frameborder=no>  
+</iframe>  
+<script>  
+Fkey();  
+addOpacity();  
+</script>  
+  
+</body>  
+</html>  

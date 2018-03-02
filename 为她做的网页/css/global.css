@@ -1,0 +1,30 @@
+body{
+	margin: 0px;
+}
+.f_l{float: left;}
+.f_r{float: right;}
+.clear_l{clear: left;}
+.clear_r{clear: right;}
+.clear_b{clear: both;}
+ul,li{list-style: none;}
+ul,ol{
+	margin: 0px;
+	padding: 0px;
+}
+dl,dt,dd{
+	margin-top: 0px;
+}
+a{
+    color:#000;
+	text-decoration: none;
+}
+.f_l{
+        float: left;
+        margin-left: 10px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+.f_r{
+        float:right;
+        margin-right: 12px;
+    }
