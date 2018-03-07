@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+    body{
+        background: #000;
+    }
+    #box{
+        perspective: 3000px;
+        perspective-origin: center;
+        margin: 50px auto;
+        width: 300px;
+        position: relative;
+    }
+    #big{
+        transform-style: preserve-3d;
+        animation:cao 3s ease infinite;
+    }
+    .small{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+    }
+    .a{
+        transform:rotateY(0deg);
+    }
+    .b{
+        transform:rotateY(36deg);
+    }
+    .c{
+        transform:rotateY(72deg);
+    }
+    .d{
+        transform:rotateY(108deg);
+    }
+    .e{
+        transform:rotateY(144deg);
+    }
+    #big::after{
+        content:"";
+        position: absolute;
+        left: 0;
+        top:300px;
+        transform: translateX(-150px) translateY(-150px)  rotateZ(90deg);   
+        width: 600px;
+        height: 1px;
+        background: #AC2925;
+    }
+    @keyframes cao{
+        from{
+            -webkit-transform: rotateZ(-30deg) rotateY(0deg);
+        }to{
+            -webkit-transform: rotateZ(-30deg) rotateY(360deg);
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="big">
+            <div class="small a"></div>
+            <div class="small b"></div>
+            <div class="small c"></div>
+            <div class="small d"></div>
+            <div class="small e"></div>
+        </div>
+    </div>
+</body>
+</html>
