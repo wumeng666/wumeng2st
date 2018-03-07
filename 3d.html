@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        #div_1{
+            -webkit-transform-style: preserve-3d;
+            position: relative;
+            height:200px;
+            width:200px;
+            /*transform:rotateZ(-60deg);*/
+        }
+        #div_1 div{
+            position:absolute;
+            width: 160px;
+            height: 160px;
+            background-color: black;
+            font-size: 50px;
+            color:#fff;
+            line-height: 160px;
+            text-align: center;
+            border: 1px solid #fff;
+        }
+        #face1  {
+    }
+    #face2 {
+        -webkit-transform-origin:right;
+        -webkit-transform: rotateY(-90deg);
+    }
+    #face3 {
+        -webkit-transform-origin:left;
+        -webkit-transform: rotateY(90deg);
+    }
+    #face4 {
+        -webkit-transform-origin:top;
+        -webkit-transform: rotateX(-90deg);
+    }
+    #face5 {
+        -webkit-transform-origin:bottom;
+        -webkit-transform: rotateX(90deg);
+    }
+    #face6 {
+        -webkit-transform: translateZ(-200px);
+    }
+    </style>
+</head>
+<body>
+    <div id="div_1">
+        <div class="face" id="face1">1</div>
+        <div class="face" id="face2">2</div>
+        <div class="face" id="face3">3</div>
+        <div class="face" id="face4">4</div>
+        <div class="face" id="face5">5</div>
+        <div class="face" id="face6">6</div>
+    </div>
+</body>
+</html>
