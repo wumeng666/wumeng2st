@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>气球</title>
+    <style type="text/css">
+    body{
+        overflow: hidden;
+        background-color: #ccc;
+    }
+    .ball{
+        position: absolute;
+        top:0px;
+        left:0px;
+        width: 160px;
+        height: 160px;
+        border-radius: 160px 160px 80px 160px;
+        background-color: #fafaf5;
+        transform:rotate(45deg);
+        box-shadow: -8px -8px 80px -8px #873940 inset;
+    }
+    .ball::after{
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        content:'';
+        border: 8px solid transparent;
+        border-right-color: #873940;
+        transform:rotate(45deg);
+    }
+    </style>
+</head>
+<body>
+    
+
+    <script type="text/javascript">
+    var num = 10,
+        bz = 160,
+        timer,balls = [],
+        wW = window.innerWidth,
+        wH = window.innerHeight;
+
+    init(10);
+    move();
+    document.body.addEventListener('click', function(e){
+        if(e.target.className.toLowerCase() === 'ball'){
+            var ele = e.target;
+            boom.call(ele,function(){
+                ele.remove();
+                init(1);
+            }.bind(ele));
+            // ele.remove(ele);
+        }
+    },false);
+    var obj = {}
+
+    timer = setInterval(move, 1000/60);
+    // 动画场景
+    function boom(cb){
+        this.timer = setInterval(function(){
+            if (this.offsetWidth < 10) {
+                // 终止定时器
+                clearInterval(this.timer);
+                // 执行回调函数
+                cb&&cb();
+                // 终值函数运行
+                return false;
+            }
+            this.speed++;
+            this.style.top = this.offsetTop - this.speed + 'px';
+            this.style.width = this.offsetWidth - 10 +'px';
+            this.style.height = this.offsetHeight - 10 + 'px';
+        }.bind(this), 1000/60)
+    }
+    // 场景 元素初始化
+    function init(num){
+        var farqument = document.createDocumentFragment();
+        for(i=0;i<num;i++){
+            var randowX = ~~(Math.random()*wW) - bz;
+                randowX = Math.abs(randowX);
+            var oBall = document.createElement('div');
+
+            oBall.classList.add('ball');
+            oBall.style.left = randowX + 'px';
+            oBall.style.top = wH - bz + 'px';
+            // 随机速度 自定义属性
+            oBall.speed = ~~(Math.random()*8) + 1;
+
+            farqument.appendChild(oBall);
+            balls.push(oBall);
+        }
+        document.body.appendChild(farqument);
+    }
+
+    function move(){
+        for(var i=0,item;item=balls[i++];){
+            item.style.top = item.offsetTop - item.speed + 'px';
+            (item.offsetTop<(0 - bz)) && (item.style.top = wH + 'px');
+        }
+    }
+
+
+</script>
+</body>
+</html>
